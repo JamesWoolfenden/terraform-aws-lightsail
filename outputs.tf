@@ -5,5 +5,3 @@ output "instance" {
 output "public_ports" {
   value = aws_lightsail_instance_public_ports.pike
 }
-
-

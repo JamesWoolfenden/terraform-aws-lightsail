@@ -70,6 +70,7 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_instance"></a> [instance](#output\_instance) | n/a |
+| <a name="output_public_ports"></a> [public\_ports](#output\_public\_ports) | n/a |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Policy
