@@ -92,21 +92,27 @@ resource "aws_iam_policy" "terraform_pike" {
             "Sid": "VisualEditor0",
             "Effect": "Allow",
             "Action": [
-                "kms:CreateAlias",
-                "kms:CreateKey",
-                "kms:DeleteAlias",
-                "kms:DescribeKey",
-                "kms:DisableKey",
-                "kms:EnableKey",
-                "kms:EnableKeyRotation",
-                "kms:GetKeyPolicy",
-                "kms:GetKeyRotationStatus",
-                "kms:ListAliases",
-                "kms:ListResourceTags",
-                "kms:PutKeyPolicy",
-                "kms:ScheduleKeyDeletion",
-                "kms:TagResource",
-                "kms:UntagResource"
+                "ec2:DescribeAccountAttributes"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "lightsail:CloseInstancePublicPorts",
+                "lightsail:CreateInstances",
+                "lightsail:CreateKeyPair",
+                "lightsail:DeleteInstance",
+                "lightsail:DeleteKeyPair",
+                "lightsail:GetInstance",
+                "lightsail:GetInstancePortStates",
+                "lightsail:GetKeyPair",
+                "lightsail:GetOperation",
+                "lightsail:PutInstancePublicPorts",
+                "lightsail:ReleaseStaticIp",
+                "lightsail:TagResource",
+                "lightsail:UntagResource"
             ],
             "Resource": "*"
         }
