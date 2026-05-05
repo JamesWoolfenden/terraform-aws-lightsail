@@ -15,7 +15,6 @@ resource "aws_lightsail_instance_public_ports" "pike" {
     }
   }
 }
-
 variable "settings" {
   type = list(object({
     protocol  = string

@@ -7,9 +7,6 @@ resource "aws_lightsail_instance" "pike" {
   user_data         = var.instance.user_data
   tags              = var.tags
 }
-
-//aws lightsail get-blueprints --region eu-west-2
-
 variable "instance" {
   type = object({
     name              = string

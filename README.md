@@ -95,27 +95,40 @@ resource "aws_iam_policy" "terraform_pike" {
             "Action": [
                 "ec2:DescribeAccountAttributes"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         },
         {
             "Sid": "VisualEditor1",
             "Effect": "Allow",
             "Action": [
+                "lightsail:AttachDisk",
                 "lightsail:CloseInstancePublicPorts",
                 "lightsail:CreateInstances",
                 "lightsail:CreateKeyPair",
                 "lightsail:DeleteInstance",
                 "lightsail:DeleteKeyPair",
+                "lightsail:DetachDisk",
+                "lightsail:DisableAddOn",
+                "lightsail:EnableAddOn",
+                "lightsail:GetDisk",
                 "lightsail:GetInstance",
                 "lightsail:GetInstancePortStates",
+                "lightsail:GetInstances",
                 "lightsail:GetKeyPair",
                 "lightsail:GetOperation",
+                "lightsail:GetRegions",
                 "lightsail:PutInstancePublicPorts",
                 "lightsail:ReleaseStaticIp",
+                "lightsail:StartInstance",
+                "lightsail:StopInstance",
                 "lightsail:TagResource",
                 "lightsail:UntagResource"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 })
