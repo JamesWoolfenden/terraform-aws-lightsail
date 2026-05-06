@@ -1,13 +1,11 @@
 # terraform-aws-lightsail
 
-[![Build Status](https://github.com/JamesWoolfenden/terraform-aws-lightsail/workflows/Verify%20and%20Bump/badge.svg?branch=master)](https://github.com/JamesWoolfenden/terraform-aws-lightsail)
+[![Build Status](https://github.com/JamesWoolfenden/terraform-aws-lightsail/workflows/Verify/badge.svg?branch=main)](https://github.com/JamesWoolfenden/terraform-aws-lightsail)
 [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-lightsail.svg)](https://github.com/JamesWoolfenden/terraform-aws-lightsail/releases/latest)
 [![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/JamesWoolfenden/terraform-aws-lightsail.svg?label=latest)](https://github.com/JamesWoolfenden/terraform-aws-lightsail/releases/latest)
 ![Terraform Version](https://img.shields.io/badge/tf-%3E%3D0.14.0-blue.svg)
-[![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/JamesWoolfenden/terraform-aws-lightsail/cis_aws)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=JamesWoolfenden%2Fterraform-aws-lightsail&benchmark=CIS+AWS+V1.2)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![checkov](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
-[![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/jameswoolfenden/terraform-aws-lightsail/general)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=JamesWoolfenden%2Fterraform-aws-lightsail&benchmark=INFRASTRUCTURE+SECURITY)
 
 ---
 
@@ -39,7 +37,7 @@ No requirements.
 ## Providers
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
 | <a name="provider_local"></a> [local](#provider\_local) | n/a |
 
@@ -50,7 +48,7 @@ No modules.
 ## Resources
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [aws_lightsail_instance.pike](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lightsail_instance) | resource |
 | [aws_lightsail_instance_public_ports.pike](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lightsail_instance_public_ports) | resource |
 | [aws_lightsail_key_pair.pike](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lightsail_key_pair) | resource |
@@ -60,15 +58,15 @@ No modules.
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| <a name="input_instance"></a> [instance](#input\_instance) | n/a | <pre>object({<br>    name              = string<br>    availability_zone = string<br>    blueprint_id      = string<br>    bundle_id         = string<br>    key_pair_name     = string<br>    user_data         = string<br>  })</pre> | n/a | yes |
-| <a name="input_settings"></a> [settings](#input\_settings) | n/a | <pre>list(object({<br>    protocol  = string<br>    from_port = number<br>    to_port   = number<br>  }))</pre> | <pre>[<br>  {<br>    "from_port": 80,<br>    "protocol": "tcp",<br>    "to_port": 80<br>  }<br>]</pre> | no |
+| ---- | ----------- | ---- | ------- | :------: |
+| <a name="input_instance"></a> [instance](#input\_instance) | n/a | <pre>object({<br/>    name              = string<br/>    availability_zone = string<br/>    blueprint_id      = string<br/>    bundle_id         = string<br/>    key_pair_name     = string<br/>    user_data         = string<br/>  })</pre> | n/a | yes |
+| <a name="input_settings"></a> [settings](#input\_settings) | n/a | <pre>list(object({<br/>    protocol  = string<br/>    from_port = number<br/>    to_port   = number<br/>  }))</pre> | <pre>[<br/>  {<br/>    "from_port": 80,<br/>    "protocol": "tcp",<br/>    "to_port": 80<br/>  }<br/>]</pre> | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | n/a | `map(any)` | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | <a name="output_instance"></a> [instance](#output\_instance) | n/a |
 | <a name="output_public_ports"></a> [public\_ports](#output\_public\_ports) | n/a |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
